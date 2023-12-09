@@ -3,4 +3,4 @@
 Projetos
 
 1. [movie-tracker](https://movie-tracker-7e6f3.web.app/)
-2. [codin](https://github.com/eduardo239/codin)
+2. [codin](https://codin-9a5d7.web.app/)
