@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>~/projetos.</title>
+    <meta
+      name="description"
+      content="Portfólio — lista de projetos: extensões, web apps, ferramentas e mais."
+    />
+    <meta name="theme-color" content="#07070d" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2307070d'/%3E%3Ctext x='8' y='44' font-family='monospace' font-size='34' font-weight='700' fill='%2300f0ff'%3E%3E_%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <noscript
+      ><style>
+        .boot {
+          display: none;
+        }
+      </style></noscript
+    >
+  </head>
+  <body>
+    <canvas id="rain" class="rain" aria-hidden="true"></canvas>
+    <div class="grid-floor" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <div id="boot" class="boot" aria-hidden="true">
+      <pre id="boot-log"></pre>
+    </div>
+
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <a class="logo" href="#top">&gt;_<span id="handle">user</span></a>
+        <nav class="nav">
+          <a href="#projects">./projetos</a>
+          <a href="#contact">./contato</a>
+        </nav>
+        <span class="sys-status"><i class="dot"></i>uplink ativo</span>
+      </div>
+    </header>
+
+    <main id="top" class="wrap">
+      <section class="hero">
+        <div class="hero-main">
+          <p class="prompt">
+            <span class="p-user" id="prompt-user">guest@portfolio</span>:<span
+              class="p-path"
+              >~</span
+            >$ whoami
+          </p>
+          <h1 class="glitch" id="name" data-text="">&nbsp;</h1>
+          <p class="role">
+            <span class="role-arrow">&gt;</span> <span id="role"></span
+            ><span class="caret" aria-hidden="true"></span>
+          </p>
+          <p class="bio" id="bio"></p>
+          <ul class="links" id="links"></ul>
+        </div>
+
+        <aside class="sysinfo" aria-label="Resumo">
+          <div class="sysinfo-bar">
+            <i></i><i></i><i></i><span>sys.info</span>
+          </div>
+          <dl id="sysinfo"></dl>
+        </aside>
+      </section>
+
+      <section id="projects" class="projects">
+        <div class="section-head">
+          <h2>
+            <span class="hash">#</span> ls ./projetos
+            <span class="count" id="count"></span>
+          </h2>
+          <div class="toolbar">
+            <label class="search">
+              <span class="search-prompt">$ grep -i</span>
+              <input
+                id="search"
+                type="search"
+                placeholder="buscar projeto..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Buscar projeto"
+              />
+              <kbd>/</kbd>
+            </label>
+            <div
+              class="filters"
+              id="filters"
+              aria-label="Filtrar por tipo"
+            ></div>
+          </div>
+        </div>
+
+        <div class="grid" id="grid"></div>
+        <p class="empty" id="empty" hidden></p>
+        <noscript
+          ><p class="empty">
+            Ative o JavaScript para ver a lista de projetos.
+          </p></noscript
+        >
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div class="wrap footer-inner">
+        <div>
+          <p class="prompt">$ cat ./contato</p>
+          <ul class="links links--small" id="footer-links"></ul>
+        </div>
+        <div class="footer-meta">
+          <p>uptime <span id="uptime">00:00:00</span></p>
+          <p>
+            &copy; <span id="year"></span>
+            <span id="footer-name"></span> &middot; exit 0
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
